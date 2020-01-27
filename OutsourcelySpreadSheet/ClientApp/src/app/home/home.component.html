@@ -1,0 +1,28 @@
+
+<table>
+  <tr>
+    <th></th>
+    <th *ngFor="let column of columns" style="text-align:center">
+      {{column.Name}}
+    </th>
+    <th (click)="addColumn()">
+      <i style="margin-left: 15px;" class="fa fa-plus text-success"></i>
+    </th>
+  </tr>
+  <tr *ngFor="let row of rows; let ri = index">
+    <td>
+      {{row.Id}}
+    </td>
+    <td *ngFor="let col of row.Values.constructor(columns.length); let ci = index" style="border:1px solid black">
+      <input [value]="rows[ri].Values[ci]?.name" (focus)="onFocus(ri,ci)" (keyup.enter)="changeValue($event,ri,ci)" (focusout)="changeValue($event,ri,ci)" type="text" style="width:100px;border:none;"/>
+    </td>
+    <td>
+    
+    </td>
+  </tr>
+  <tr>
+    <td (click)="addRow()">
+      <i class="fa fa-plus text-success"></i>
+    </td>
+  </tr>
+</table>
