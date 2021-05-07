@@ -1,8 +1,11 @@
 # spreadsheet
-Basic Spreadsheet Application 
+Basic Spreadsheet Application that can do simple formula calculations 
 Technologies used:
  - .NET Core 3.1
  - Angular 8
+ 
+ ![image](https://user-images.githubusercontent.com/8006086/117440259-64f16a00-af66-11eb-8bd1-84b2771b1d8f.png)
+
  
  Steps to run the project.
  1. Clone project
